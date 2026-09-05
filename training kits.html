@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NDAHAYO DIEU EST LA — Sports Kits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14161b;
+    --paper:#f6f4ef;
+    --paper-dim:#efece3;
+    --line:#dcd8cd;
+    --cobalt:#1f3fe0;
+    --cobalt-dark:#152c9e;
+    --flare:#ff5a1f;
+    --whatsapp:#25D366;
+    --muted:#6c6e77;
+    --white:#ffffff;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Anton',sans-serif;
+    font-weight:400;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    line-height:0.95;
+    margin:0;
+  }
+  a{color:inherit;text-decoration:none;}
+  button{font-family:inherit;cursor:pointer;}
+  img{max-width:100%;display:block;}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+  :focus-visible{outline:3px solid var(--cobalt);outline-offset:2px;}
+
+  /* ---------- HEADER ---------- */
+  .site-header{
+    position:sticky;top:0;z-index:100;
+    background:var(--ink);
+    color:var(--paper);
+    border-bottom:3px solid var(--flare);
+  }
+  .header-inner{
+    max-width:1180px;margin:0 auto;padding:0 24px;
+    display:flex;align-items:center;justify-content:space-between;
+    height:68px;gap:12px;
+  }
+  .logo{display:flex;flex-direction:column;line-height:1;flex-shrink:0;}
+  .logo-main{font-family:'Anton',sans-serif;font-size:21px;color:var(--paper);letter-spacing:.01em;}
+  .logo-sub{font-size:9px;letter-spacing:.16em;color:var(--flare);margin-top:3px;font-weight:700;}
+  .main-nav{display:flex;gap:2px;align-items:center;}
+  .main-nav a{
+    padding:10px 16px;font-size:14px;font-weight:600;
+    color:#c9cad1;border-bottom:2px solid transparent;
+    transition:color .15s ease;
+  }
+  .main-nav a:hover{color:var(--paper);}
+  .main-nav a.active{color:var(--paper);border-bottom-color:var(--flare);}
+  .header-actions{display:flex;align-items:center;gap:8px;}
+  .cart-btn{
+    background:transparent;border:2px solid var(--paper);color:var(--paper);
+    padding:8px 14px;font-size:13px;font-weight:700;letter-spacing:.03em;
+    display:flex;align-items:center;gap:8px;white-space:nowrap;
+    transition:background .15s ease, color .15s ease;
+  }
+  .cart-btn:hover{background:var(--paper);color:var(--ink);}
+  .cart-count{
+    background:var(--flare);color:var(--white);
+    font-size:11px;font-weight:800;min-width:18px;height:18px;
+    border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+    padding:0 4px;
+  }
+  .menu-toggle{
+    display:none;background:none;border:none;color:var(--paper);
+    font-size:26px;line-height:1;padding:4px 8px;
+  }
+
+  /* ---------- PAGES ---------- */
+  .page{display:none;}
+  .page.active{display:block;}
+  section.pad{padding:64px 0;}
+
+  /* ---------- HERO ---------- */
+  .hero{background:var(--ink);color:var(--paper);padding:72px 0 0 0;overflow:hidden;}
+  .hero-inner{
+    display:grid;grid-template-columns:1.1fr 0.9fr;align-items:center;gap:32px;
+    max-width:1180px;margin:0 auto;padding:0 24px;
+  }
+  .hero-eyebrow{color:var(--flare);font-weight:800;font-size:13px;letter-spacing:.08em;margin-bottom:18px;}
+  .hero h1{font-size:clamp(46px,7vw,84px);margin-bottom:22px;}
+  .hero h1 .accent{color:var(--flare);}
+  .hero p{font-size:17px;color:#c9cad1;max-width:46ch;margin-bottom:32px;line-height:1.6;}
+  .btn-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:56px;}
+  .btn{display:inline-block;padding:14px 26px;font-weight:700;font-size:14px;letter-spacing:.02em;border:2px solid transparent;transition:transform .12s ease, background .15s ease, color .15s ease;}
+  .btn:active{transform:scale(.97);}
+  .btn-primary{background:var(--flare);color:var(--white);}
+  .btn-primary:hover{background:#e64d14;}
+  .btn-outline{border-color:var(--paper);color:var(--paper);}
+  .btn-outline:hover{background:var(--paper);color:var(--ink);}
+  .btn-dark{background:var(--ink);color:var(--paper);}
+  .btn-dark:hover{background:var(--cobalt-dark);}
+  .btn-cobalt{background:var(--cobalt);color:var(--white);}
+  .btn-cobalt:hover{background:var(--cobalt-dark);}
+  .btn-block{width:100%;text-align:center;border:none;}
+  .btn-ghost{background:transparent;border:2px solid var(--ink);color:var(--ink);}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper);}
+  .btn-whatsapp{background:var(--whatsapp);color:var(--white);display:inline-flex;align-items:center;gap:8px;}
+  .btn-whatsapp:hover{background:#1ebc59;}
+
+  .hero-visual{position:relative;height:340px;display:flex;align-items:center;justify-content:center;}
+  .hero-visual svg{width:100%;height:100%;max-width:340px;}
+
+  .marquee{border-top:1px solid #2a2c33;overflow:hidden;white-space:nowrap;padding:14px 0;}
+  .marquee-track{display:inline-block;animation:scroll 22s linear infinite;}
+  .marquee span{display:inline-block;font-family:'Anton',sans-serif;font-size:15px;letter-spacing:.06em;color:#4b4d57;padding:0 22px;text-transform:uppercase;}
+  .marquee span:nth-child(odd){color:#7d7f89;}
+  @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* ---------- CATEGORY GRID ---------- */
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px;gap:20px;flex-wrap:wrap;}
+  .section-head h2{font-size:clamp(28px,4vw,40px);}
+  .section-head p{color:var(--muted);max-width:40ch;font-size:15px;margin-top:8px;}
+  .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .cat-card{
+    position:relative;overflow:hidden;min-height:200px;
+    display:flex;flex-direction:column;justify-content:space-between;padding:22px;
+    background-size:cover;background-position:center;
+    transition:transform .15s ease;color:#fff;
+  }
+  .cat-card:hover{transform:translateY(-3px);}
+  .cat-card::before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(20,22,27,.15) 0%, rgba(20,22,27,.85) 100%);
+    z-index:0;
+  }
+  .cat-card > *{position:relative;z-index:1;}
+  .cat-number{
+    font-family:'Anton',sans-serif;font-size:15px;color:var(--flare);
+    border:2px solid var(--flare);width:38px;height:38px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;background:rgba(20,22,27,.55);
+  }
+  .cat-card h3{font-size:22px;color:#fff;}
+  .cat-card .arrow{align-self:flex-end;font-size:20px;margin-top:14px;transition:transform .15s ease;}
+  .cat-card:hover .arrow{transform:translateX(6px);}
+
+  /* ---------- PRODUCT GRID ---------- */
+  .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px 18px;}
+  .product-card{background:var(--white);border:1px solid var(--line);display:flex;flex-direction:column;transition:border-color .15s ease;}
+  .product-card:hover{border-color:var(--ink);}
+  .product-media{aspect-ratio:1/1;background:var(--paper-dim);display:flex;align-items:center;justify-content:center;padding:18px;position:relative;overflow:hidden;}
+  .product-media svg{width:78%;height:78%;}
+  .product-media img{width:100%;height:100%;object-fit:cover;}
+  .product-media.has-photo{padding:0;}
+  .tag-new{position:absolute;top:10px;left:10px;background:var(--cobalt);color:var(--white);font-size:10px;font-weight:800;letter-spacing:.06em;padding:4px 8px;z-index:2;}
+  .product-body{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1;}
+  .product-sport{font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.05em;text-transform:uppercase;}
+  .product-name{font-size:16px;font-weight:700;}
+  .product-price{font-size:15px;font-weight:800;color:var(--cobalt);margin-top:auto;}
+  .product-actions{display:flex;gap:8px;padding:0 16px 16px;}
+  .product-actions .btn{flex:1;padding:10px 12px;font-size:12px;text-align:center;}
+
+  .filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px;}
+  .filter-chip{padding:9px 16px;border:1px solid var(--line);background:var(--white);font-size:13px;font-weight:600;color:var(--muted);}
+  .filter-chip.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+
+  /* ---------- PRODUCT DETAIL ---------- */
+  .breadcrumb{font-size:13px;color:var(--muted);margin-bottom:28px;}
+  .breadcrumb a:hover{color:var(--ink);}
+  .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;}
+  .detail-media{background:var(--paper-dim);border:1px solid var(--line);aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;padding:40px;overflow:hidden;}
+  .detail-media svg{width:70%;height:70%;}
+  .detail-media img{width:100%;height:100%;object-fit:cover;}
+  .detail-media.has-photo{padding:0;}
+  .detail-info h1{font-size:clamp(28px,4vw,38px);margin-bottom:10px;}
+  .detail-price{font-size:22px;font-weight:800;color:var(--cobalt);margin-bottom:18px;}
+  .detail-desc{color:var(--muted);line-height:1.7;margin-bottom:26px;font-size:15px;}
+  .option-block{margin-bottom:24px;}
+  .option-label{font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;margin-bottom:10px;display:block;}
+  .size-row{display:flex;gap:8px;flex-wrap:wrap;}
+  .size-opt{border:1px solid var(--line);background:var(--white);min-width:46px;padding:9px 10px;text-align:center;font-size:13px;font-weight:700;}
+  .size-opt.selected{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .qty-row{display:flex;align-items:center;gap:14px;}
+  .qty-control{display:flex;align-items:center;border:1px solid var(--line);}
+  .qty-control button{background:none;border:none;width:38px;height:38px;font-size:16px;font-weight:700;}
+  .qty-control span{width:34px;text-align:center;font-weight:700;}
+  .detail-cta{display:flex;gap:12px;margin-top:28px;}
+  .detail-cta .btn{flex:1;text-align:center;padding:16px;}
+  .detail-meta{margin-top:32px;border-top:1px solid var(--line);padding-top:20px;font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:6px;}
+  .related-title{margin:64px 0 24px;font-size:22px;}
+
+  /* ---------- CART ---------- */
+  .cart-layout{display:grid;grid-template-columns:1.6fr 1fr;gap:40px;align-items:flex-start;}
+  .cart-line{display:grid;grid-template-columns:88px 1fr auto;gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);}
+  .cart-line .thumb{background:var(--paper-dim);border:1px solid var(--line);width:88px;height:88px;display:flex;align-items:center;justify-content:center;padding:10px;overflow:hidden;}
+  .cart-line .thumb svg{width:100%;height:100%;}
+  .cart-line .thumb img{width:100%;height:100%;object-fit:cover;}
+  .cart-line .thumb.has-photo{padding:0;}
+  .cart-line-name{font-weight:700;font-size:15px;margin-bottom:4px;}
+  .cart-line-meta{font-size:12px;color:var(--muted);margin-bottom:10px;}
+  .cart-line-controls{display:flex;align-items:center;gap:16px;}
+  .cart-remove{background:none;border:none;color:var(--muted);font-size:12px;text-decoration:underline;font-weight:600;}
+  .cart-remove:hover{color:var(--flare);}
+  .cart-line-price{font-weight:800;text-align:right;white-space:nowrap;}
+  .summary-box{border:1px solid var(--line);background:var(--white);padding:26px;}
+  .summary-row{display:flex;justify-content:space-between;font-size:14px;margin-bottom:12px;color:var(--muted);}
+  .summary-row.total{color:var(--ink);font-weight:800;font-size:18px;border-top:1px solid var(--line);padding-top:16px;margin-top:16px;}
+  .empty-state{text-align:center;padding:80px 20px;color:var(--muted);}
+  .empty-state h3{font-size:26px;color:var(--ink);margin-bottom:12px;}
+
+  /* ---------- CHECKOUT ---------- */
+  .checkout-layout{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:flex-start;}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .form-grid .full{grid-column:1/-1;}
+  label{font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px;display:block;color:var(--muted);}
+  input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);background:var(--white);font-family:inherit;font-size:14px;color:var(--ink);}
+  input:focus,select:focus,textarea:focus{border-color:var(--ink);}
+  .field{margin-bottom:18px;}
+  fieldset{border:none;padding:0;margin:0 0 36px;}
+  legend{font-family:'Anton',sans-serif;font-size:20px;text-transform:uppercase;margin-bottom:18px;padding:0;}
+  .order-item-row{display:flex;justify-content:space-between;font-size:13px;padding:8px 0;border-bottom:1px solid var(--line);}
+  .confirm-box{text-align:center;padding:80px 20px;}
+  .confirm-box .num{font-family:'Anton',sans-serif;color:var(--flare);border:2px solid var(--flare);width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:26px;}
+  .confirm-box h2{font-size:32px;margin-bottom:14px;}
+  .confirm-box p{color:var(--muted);margin-bottom:28px;}
+
+  /* ---------- ABOUT ---------- */
+  .about-hero{background:var(--ink);color:var(--paper);padding:70px 0;}
+  .about-hero h1{font-size:clamp(32px,6vw,54px);max-width:18ch;}
+  .about-hero .accent{color:var(--flare);}
+  .values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:20px;}
+  .value-card{border:1px solid var(--line);padding:26px;background:var(--white);}
+  .value-card .cat-number{margin-bottom:16px;color:var(--flare);background:none;position:static;}
+  .stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:36px 0;margin:50px 0;}
+  .stat{text-align:center;}
+  .stat .num{font-family:'Anton',sans-serif;font-size:40px;color:var(--cobalt);}
+  .stat .label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:4px;}
+
+  /* ---------- CONTACT ---------- */
+  .contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:52px;}
+  .contact-info-item{display:flex;gap:16px;margin-bottom:26px;align-items:flex-start;}
+  .contact-info-item .icon{width:42px;height:42px;background:var(--ink);color:var(--flare);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Anton',sans-serif;font-size:16px;}
+  .contact-info-item .icon.wa{background:var(--whatsapp);color:#fff;}
+  .contact-info-item h4{font-size:15px;margin-bottom:4px;}
+  .contact-info-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.5;}
+  .contact-info-item a.wa-link{color:var(--whatsapp);font-weight:700;}
+  .map-block{margin-top:20px;height:180px;background:var(--paper-dim);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;font-weight:600;}
+
+  /* ---------- ACCOUNT / LOGIN ---------- */
+  .account-wrap{max-width:440px;margin:0 auto;}
+  .auth-tabs{display:flex;border:1px solid var(--line);margin-bottom:28px;}
+  .auth-tab{flex:1;text-align:center;padding:14px;font-weight:700;font-size:13px;letter-spacing:.03em;text-transform:uppercase;background:var(--white);color:var(--muted);}
+  .auth-tab.active{background:var(--ink);color:var(--paper);}
+  .auth-notice{background:var(--paper-dim);border-left:4px solid var(--cobalt);padding:14px 16px;font-size:13px;margin-bottom:24px;color:var(--ink);}
+  .auth-error{background:#fdecec;border-left:4px solid #d32f2f;padding:12px 16px;font-size:13px;margin-bottom:18px;color:#a12626;display:none;}
+  .dashboard-card{border:1px solid var(--line);background:var(--white);padding:32px;text-align:center;max-width:440px;margin:0 auto;}
+  .avatar-badge{width:64px;height:64px;border-radius:50%;background:var(--ink);color:var(--flare);font-family:'Anton',sans-serif;font-size:24px;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;}
+  .dashboard-card h3{font-size:22px;margin-bottom:6px;}
+  .dashboard-card p{color:var(--muted);font-size:14px;margin-bottom:24px;}
+  .dashboard-row{display:flex;justify-content:space-between;font-size:13px;padding:10px 0;border-top:1px solid var(--line);text-align:left;}
+  .dashboard-row:last-of-type{border-bottom:1px solid var(--line);margin-bottom:24px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink);color:#c9cad1;padding:56px 0 24px;margin-top:80px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;margin-bottom:40px;}
+  .footer-logo-main{font-family:'Anton',sans-serif;font-size:24px;color:var(--paper);}
+  .footer-logo-sub{font-size:10px;letter-spacing:.16em;color:var(--flare);margin-top:4px;font-weight:700;margin-bottom:14px;}
+  footer p{font-size:13px;line-height:1.6;color:#9a9ba4;max-width:32ch;}
+  footer h5{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--paper);margin-bottom:16px;}
+  footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;}
+  footer a{font-size:13px;color:#9a9ba4;}
+  footer a:hover{color:var(--paper);}
+  footer a.wa-footer{color:var(--whatsapp);font-weight:700;}
+  .footer-bottom{border-top:1px solid #2a2c33;padding-top:22px;font-size:12px;color:#6e707a;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+
+  .toast{position:fixed;bottom:26px;right:26px;background:var(--ink);color:var(--paper);padding:16px 22px;font-size:14px;font-weight:600;border-left:4px solid var(--flare);transform:translateY(140%);transition:transform .25s ease;z-index:999;max-width:280px;}
+  .toast.show{transform:translateY(0);}
+
+  /* ---------- WHATSAPP FLOAT ---------- */
+  .wa-float{
+    position:fixed;bottom:26px;left:26px;z-index:998;
+    width:56px;height:56px;border-radius:50%;background:var(--whatsapp);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 6px 18px rgba(0,0,0,.25);
+    transition:transform .15s ease;
+  }
+  .wa-float:hover{transform:scale(1.08);}
+  .wa-float svg{width:28px;height:28px;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    .main-nav{position:absolute;top:68px;left:0;right:0;background:var(--ink);flex-direction:column;align-items:stretch;border-top:1px solid #2a2c33;display:none;}
+    .main-nav.open{display:flex;}
+    .main-nav a{padding:16px 24px;border-bottom:1px solid #2a2c33;}
+    .menu-toggle{display:block;}
+    .hero-inner{grid-template-columns:1fr;}
+    .hero-visual{height:220px;order:-1;}
+    .cat-grid{grid-template-columns:repeat(2,1fr);}
+    .product-grid{grid-template-columns:repeat(2,1fr);}
+    .detail-grid,.cart-layout,.checkout-layout,.contact-layout{grid-template-columns:1fr;}
+    .form-grid{grid-template-columns:1fr;}
+    .values-grid{grid-template-columns:1fr;}
+    .stat-strip{grid-template-columns:repeat(2,1fr);row-gap:24px;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+    .cart-btn span.acct-label{display:none;}
+  }
+  @media (max-width:560px){
+    .cat-grid{grid-template-columns:1fr;}
+    .product-grid{grid-template-columns:repeat(2,1fr);}
+    .cart-line{grid-template-columns:64px 1fr;}
+    .cart-line-price{grid-column:2/3;text-align:left;margin-top:8px;}
+    .footer-grid{grid-template-columns:1fr;}
+    .btn-row{flex-direction:column;}
+    .btn-row .btn{text-align:center;}
+    .wa-float{width:50px;height:50px;bottom:18px;left:18px;}
+    .toast{left:18px;right:18px;max-width:none;bottom:18px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo" onclick="navigate('home');return false;">
+      <span class="logo-main">NDAHAYO</span>
+      <span class="logo-sub">DIEU EST LA</span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#" data-nav="home" onclick="navigate('home');return false;">Home</a>
+      <a href="#" data-nav="products" onclick="navigate('products');return false;">Shop</a>
+      <a href="#" data-nav="about" onclick="navigate('about');return false;">About</a>
+      <a href="#" data-nav="contact" onclick="navigate('contact');return false;">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-btn" id="accountBtn" onclick="navigate('account')"><span class="acct-label">Login</span></button>
+      <button class="cart-btn" onclick="navigate('cart')">Cart <span class="cart-count" id="cartCount">0</span></button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="app">
+
+  <!-- ============ HOME ============ -->
+  <section class="page" data-page="home">
+    <div class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="hero-eyebrow">NDAHAYO DIEU EST LA · SPORTS KITS</div>
+          <h1>GEAR UP.<br>SHOW UP.<br><span class="accent">GO OUT THERE.</span></h1>
+          <p>Match-ready jerseys, shorts, footwear and accessories for football, basketball, volleyball and athletics. Priced in Ugandan Shillings, built for the whistle, not the sideline.</p>
+          <div class="btn-row">
+            <a href="#" class="btn btn-primary" onclick="navigate('products');return false;">Shop the kit</a>
+            <a href="https://wa.me/2507805441990?text=Hello%20NDAHAYO%20DIEU%20EST%20LA%2C%20I%27d%20like%20to%20ask%20about%20your%20sports%20kits." target="_blank" rel="noopener" class="btn btn-whatsapp">
+              <svg viewBox="0 0 32 32" width="18" height="18" fill="currentColor"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-1.8C13.5 28 14.7 28 16 28c6.6 0 12-5.4 12-13S22.6 3 16 3zm0 23.2c-1.3 0-2.6-.3-3.7-.9l-.3-.2-4.6 1.1 1.1-4.5-.2-.3C7.2 19.6 6.6 17.3 6.6 15c0-5.2 4.2-9.4 9.4-9.4S25.4 9.8 25.4 15 21.2 26.2 16 26.2zm5.3-7c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+              WhatsApp us
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual" id="heroVisual"></div>
+      </div>
+      <div class="marquee"><div class="marquee-track" id="marqueeTrack"></div></div>
+    </div>
+
+    <div class="container pad">
+      <div class="section-head">
+        <div>
+          <h2>Shop by sport</h2>
+          <p>Every category, numbered like the squad list. Pick a discipline and find your kit.</p>
+        </div>
+      </div>
+      <div class="cat-grid" id="categoryGrid"></div>
+    </div>
+
+    <div class="container pad" style="padding-top:0;">
+      <div class="section-head">
+        <div>
+          <h2>Fresh off the rack</h2>
+          <p>New arrivals and squad favourites, picked for the season ahead.</p>
+        </div>
+        <a href="#" class="btn btn-ghost" onclick="navigate('products');return false;">View all products</a>
+      </div>
+      <div class="product-grid" id="featuredGrid"></div>
+    </div>
+
+    <div class="container pad" style="padding-top:0;">
+      <div class="stat-strip">
+        <div class="stat"><div class="num">14</div><div class="label">Product lines</div></div>
+        <div class="stat"><div class="num">6</div><div class="label">Sports covered</div></div>
+        <div class="stat"><div class="num">48H</div><div class="label">Dispatch time</div></div>
+        <div class="stat"><div class="num">30D</div><div class="label">Free returns</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCTS ============ -->
+  <section class="page" data-page="products">
+    <div class="container pad">
+      <div class="breadcrumb"><a href="#" onclick="navigate('home');return false;">Home</a> / Shop</div>
+      <div class="section-head">
+        <div>
+          <h2>The full kit list</h2>
+          <p>Jerseys, shorts, footwear and accessories across every discipline we outfit. Prices in Ugandan Shillings.</p>
+        </div>
+      </div>
+      <div class="filter-bar" id="filterBar"></div>
+      <div class="product-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCT DETAIL ============ -->
+  <section class="page" data-page="detail">
+    <div class="container pad">
+      <div class="breadcrumb">
+        <a href="#" onclick="navigate('home');return false;">Home</a> /
+        <a href="#" onclick="navigate('products');return false;">Shop</a> /
+        <span id="detailCrumb"></span>
+      </div>
+      <div class="detail-grid" id="detailContent"></div>
+      <h3 class="related-title">You might also line up</h3>
+      <div class="product-grid" id="relatedGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ CART ============ -->
+  <section class="page" data-page="cart">
+    <div class="container pad">
+      <div class="breadcrumb"><a href="#" onclick="navigate('home');return false;">Home</a> / Cart</div>
+      <div class="section-head"><div><h2>Your bag</h2></div></div>
+      <div id="cartContent"></div>
+    </div>
+  </section>
+
+  <!-- ============ CHECKOUT ============ -->
+  <section class="page" data-page="checkout">
+    <div class="container pad">
+      <div class="breadcrumb"><a href="#" onclick="navigate('home');return false;">Home</a> / <a href="#" onclick="navigate('cart');return false;">Cart</a> / Checkout</div>
+      <div id="checkoutContent"></div>
+    </div>
+  </section>
+
+  <!-- ============ ACCOUNT / LOGIN ============ -->
+  <section class="page" data-page="account">
+    <div class="container pad">
+      <div class="breadcrumb"><a href="#" onclick="navigate('home');return false;">Home</a> / Account</div>
+      <div id="accountContent"></div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="page" data-page="about">
+    <div class="about-hero">
+      <div class="container">
+        <div class="hero-eyebrow" style="color:var(--flare);">ABOUT US</div>
+        <h1>Kitted out since<br><span class="accent">the first whistle.</span></h1>
+      </div>
+    </div>
+    <div class="container pad">
+      <div class="detail-grid" style="align-items:start;">
+        <div>
+          <h2 style="font-size:28px;margin-bottom:18px;">Why we exist</h2>
+          <p class="detail-desc">NDAHAYO DIEU EST LA started on the sideline of a five-a-side league, where half the squad played in mismatched shirts because proper kits were slow, overpriced, or built for people who don't actually play. We set out to fix that: real match-weight fabric, true team colourways, and sizing that fits players, not mannequins.</p>
+          <p class="detail-desc">Today we outfit football, basketball, volleyball and athletics squads, plus everyday training kits for anyone who shows up to move. No filler collections — every product on this site is something we'd wear ourselves.</p>
+        </div>
+        <div>
+          <h2 style="font-size:28px;margin-bottom:18px;">How we work</h2>
+          <div class="values-grid" style="grid-template-columns:1fr;">
+            <div class="value-card">
+              <div class="cat-number">01</div>
+              <h3 style="font-size:17px;margin-bottom:8px;">Match-tested fabric</h3>
+              <p style="color:var(--muted);font-size:14px;margin:0;">Every jersey is worn through a full season by our test squads before it ships.</p>
+            </div>
+            <div class="value-card">
+              <div class="cat-number">02</div>
+              <h3 style="font-size:17px;margin-bottom:8px;">Fair, fixed pricing</h3>
+              <p style="color:var(--muted);font-size:14px;margin:0;">Prices are quoted in Ugandan Shillings — no inflated "sale" prices, no surprise conversions.</p>
+            </div>
+            <div class="value-card">
+              <div class="cat-number">03</div>
+              <h3 style="font-size:17px;margin-bottom:8px;">48-hour dispatch</h3>
+              <p style="color:var(--muted);font-size:14px;margin:0;">Order before matchday. We hold real stock, not pre-orders dressed up as ready-to-ship.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="page" data-page="contact">
+    <div class="container pad">
+      <div class="breadcrumb"><a href="#" onclick="navigate('home');return false;">Home</a> / Contact</div>
+      <div class="section-head"><div><h2>Get in touch</h2><p>Questions on sizing, bulk team orders, or an exchange — we reply within one business day.</p></div></div>
+      <div class="contact-layout">
+        <div>
+          <div class="contact-info-item">
+            <div class="icon wa">
+              <svg viewBox="0 0 32 32" width="20" height="20" fill="currentColor"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-1.8C13.5 28 14.7 28 16 28c6.6 0 12-5.4 12-13S22.6 3 16 3zm0 23.2c-1.3 0-2.6-.3-3.7-.9l-.3-.2-4.6 1.1 1.1-4.5-.2-.3C7.2 19.6 6.6 17.3 6.6 15c0-5.2 4.2-9.4 9.4-9.4S25.4 9.8 25.4 15 21.2 26.2 16 26.2zm5.3-7c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+            </div>
+            <div>
+              <h4>WhatsApp</h4>
+              <p><a class="wa-link" href="https://wa.me/2507805441990" target="_blank" rel="noopener">+250 780 544 1990</a><br>Fastest way to reach us — sizing, orders, everything.</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon">@</div>
+            <div><h4>Email</h4><p>hello@ndahayodieuestla.example</p></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon">⌂</div>
+            <div><h4>Studio</h4><p>Plot 14, Kampala Road<br>Kampala, Uganda</p></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon">⚑</div>
+            <div><h4>Team orders</h4><p>Outfitting a full squad? Message us on WhatsApp about bulk pricing and custom numbering.</p></div>
+          </div>
+          <div class="map-block">Studio location map</div>
+        </div>
+        <div>
+          <form id="contactForm" onsubmit="handleContactSubmit(event)">
+            <div class="field"><label for="cName">Full name</label><input id="cName" required></div>
+            <div class="field"><label for="cEmail">Email</label><input id="cEmail" type="email" required></div>
+            <div class="field"><label for="cSubject">Subject</label><input id="cSubject" required></div>
+            <div class="field"><label for="cMsg">Message</label><textarea id="cMsg" rows="5" required></textarea></div>
+            <button class="btn btn-cobalt btn-block" type="submit">Send message</button>
+          </form>
+          <div id="contactConfirm" style="display:none;padding:20px 0;">
+            <h3 style="font-size:20px;margin-bottom:8px;">Message sent.</h3>
+            <p style="color:var(--muted);font-size:14px;">Thanks — a member of the team will reply within one business day, or message us directly on WhatsApp for a faster answer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-main">NDAHAYO</div>
+        <div class="footer-logo-sub">DIEU EST LA</div>
+        <p>Sports kits built for people who actually play: jerseys, shorts, footwear and accessories across football, basketball, volleyball and athletics.</p>
+      </div>
+      <div>
+        <h5>Shop</h5>
+        <ul>
+          <li><a href="#" onclick="navigate('products','football');return false;">Football</a></li>
+          <li><a href="#" onclick="navigate('products','basketball');return false;">Basketball</a></li>
+          <li><a href="#" onclick="navigate('products','volleyball');return false;">Volleyball</a></li>
+          <li><a href="#" onclick="navigate('products','athletics');return false;">Athletics</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#" onclick="navigate('about');return false;">About</a></li>
+          <li><a href="#" onclick="navigate('contact');return false;">Contact</a></li>
+          <li><a href="#" onclick="navigate('account');return false;">Account</a></li>
+          <li><a href="#" onclick="navigate('cart');return false;">Cart</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Support</h5>
+        <ul>
+          <li><a class="wa-footer" href="https://wa.me/2507805441990" target="_blank" rel="noopener">WhatsApp: +250 780 544 1990</a></li>
+          <li><a href="#" onclick="navigate('contact');return false;">Sizing help</a></li>
+          <li><a href="#" onclick="navigate('contact');return false;">Returns</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 NDAHAYO DIEU EST LA Sports Kits. All rights reserved.</span>
+      <span>Kampala, Uganda</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/2507805441990?text=Hello%20NDAHAYO%20DIEU%20EST%20LA%2C%20I%27d%20like%20to%20ask%20about%20your%20sports%20kits." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" fill="#ffffff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-1.8C13.5 28 14.7 28 16 28c6.6 0 12-5.4 12-13S22.6 3 16 3zm0 23.2c-1.3 0-2.6-.3-3.7-.9l-.3-.2-4.6 1.1 1.1-4.5-.2-.3C7.2 19.6 6.6 17.3 6.6 15c0-5.2 4.2-9.4 9.4-9.4S25.4 9.8 25.4 15 21.2 26.2 16 26.2zm5.3-7c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============ PRODUCT DATA (prices in UGX) ============ */
+const PRODUCTS = [
+  {id:1,name:"Thunderbolt Football Jersey",sport:"football",cat:"jerseys",icon:"jersey",color:"#1f3fe0",number:9,price:220000,sizes:["S","M","L","XL"],desc:"Match-weight football jersey in breathable mesh with a full front print. Built for 90 minutes of hard running.",image:"https://images.pexels.com/photos/16678677/pexels-photo-16678677.jpeg?auto=compress&cs=tinysrgb&w=700"},
+  {id:2,name:"Skyline Basketball Jersey",sport:"basketball",cat:"jerseys",icon:"jersey",color:"#ff5a1f",number:23,price:200000,sizes:["S","M","L","XL"],desc:"Sleeveless basketball jersey with side mesh panels for maximum airflow on fast breaks.",image:"https://images.pexels.com/photos/12361082/pexels-photo-12361082.jpeg?auto=compress&cs=tinysrgb&w=700"},
+  {id:3,name:"Rally Volleyball Jersey",sport:"volleyball",cat:"jerseys",icon:"jersey",color:"#14161b",number:4,price:185000,sizes:["S","M","L","XL"],desc:"Fitted volleyball jersey with stretch fabric that moves through every dig and spike.",image:"https://images.pexels.com/photos/15741339/pexels-photo-15741339.jpeg?auto=compress&cs=tinysrgb&w=700"},
+  {id:4,name:"Sprint Athletics Vest",sport:"athletics",cat:"jerseys",icon:"jersey",color:"#ffffff",number:100,price:150000,sizes:["S","M","L","XL"],desc:"Featherweight racing vest with laser-cut ventilation for track and road.",image:"https://images.pexels.com/photos/618612/pexels-photo-618612.jpeg?auto=compress&cs=tinysrgb&w=700"},
+  {id:5,name:"Match Football Shorts",sport:"football",cat:"shorts",icon:"shorts",color:"#1f3fe0",price:130000,sizes:["S","M","L","XL"],desc:"Lightweight football shorts with an inner brief and zip pocket for matchday essentials."},
+  {id:6,name:"Baseline Basketball Shorts",sport:"basketball",cat:"shorts",icon:"shorts",color:"#ff5a1f",price:135000,sizes:["S","M","L","XL"],desc:"Longer-length basketball shorts with side stripe detailing and a wide, comfortable waistband."},
+  {id:7,name:"Set Volleyball Shorts",sport:"volleyball",cat:"shorts",icon:"shorts",color:"#14161b",price:120000,sizes:["S","M","L","XL"],desc:"Compression-lined shorts built for diving, sliding, and staying put through every rally."},
+  {id:8,name:"Track Athletics Shorts",sport:"athletics",cat:"shorts",icon:"shorts",color:"#6c6e77",price:115000,sizes:["S","M","L","XL"],desc:"Split-leg running shorts with a built-in liner and zero-chafe seams."},
+  {id:9,name:"Pace Runner Shoes",sport:"athletics",cat:"shoes",icon:"shoe",color:"#1f3fe0",price:335000,sizes:["40","41","42","43","44","45"],desc:"Responsive daily trainer with a springy midsole for tempo runs and long mileage.",image:"https://images.pexels.com/photos/1027130/pexels-photo-1027130.jpeg?auto=compress&cs=tinysrgb&w=700"},
+  {id:10,name:"Court Grip Basketball Shoes",sport:"basketball",cat:"shoes",icon:"shoe",color:"#ff5a1f",price:415000,sizes:["40","41","42","43","44","45"],desc:"High-top basketball shoe with reinforced ankle support and a herringbone traction sole.",image:"https://images.pexels.com/photos/1456706/pexels-photo-1456706.jpeg?auto=compress&cs=tinysrgb&w=700"},
+  {id:11,name:"Spike Volleyball Shoes",sport:"volleyball",cat:"shoes",icon:"shoe",color:"#14161b",price:360000,sizes:["40","41","42","43","44","45"],desc:"Low-cut indoor court shoe with a gum sole for quick lateral cuts and controlled landings.",image:"https://images.pexels.com/photos/1124466/pexels-photo-1124466.jpeg?auto=compress&cs=tinysrgb&w=700"},
+  {id:12,name:"Squad Duffel Bag",sport:"accessories",cat:"accessories",icon:"bag",color:"#14161b",price:170000,sizes:["One size"],desc:"Water-resistant kit bag with a separate boot compartment and padded shoulder strap."},
+  {id:13,name:"Match Ball",sport:"football",cat:"accessories",icon:"ball",color:"#ffffff",price:105000,sizes:["Size 5"],desc:"Thermally bonded match ball with a textured surface for consistent flight and touch.",image:"https://images.pexels.com/photos/12757100/pexels-photo-12757100.jpeg?auto=compress&cs=tinysrgb&w=700"},
+  {id:14,name:"Pro Socks 3-Pack",sport:"accessories",cat:"accessories",icon:"sock",color:"#1f3fe0",price:55000,sizes:["S/M","L/XL"],desc:"Cushioned crew socks with arch support, sold as a set of three pairs."}
+];
+
+const CATEGORIES = [
+  {key:"football",label:"Football",num:9,image:"https://images.pexels.com/photos/16678677/pexels-photo-16678677.jpeg?auto=compress&cs=tinysrgb&w=500"},
+  {key:"basketball",label:"Basketball",num:23,image:"https://images.pexels.com/photos/12361082/pexels-photo-12361082.jpeg?auto=compress&cs=tinysrgb&w=500"},
+  {key:"volleyball",label:"Volleyball",num:4,image:"https://images.pexels.com/photos/15741339/pexels-photo-15741339.jpeg?auto=compress&cs=tinysrgb&w=500"},
+  {key:"athletics",label:"Athletics",num:100,image:"https://images.pexels.com/photos/618612/pexels-photo-618612.jpeg?auto=compress&cs=tinysrgb&w=500"},
+  {key:"shoes",label:"Footwear",num:1,image:"https://images.pexels.com/photos/1027130/pexels-photo-1027130.jpeg?auto=compress&cs=tinysrgb&w=500"},
+  {key:"accessories",label:"Accessories",num:12,image:"https://images.pexels.com/photos/12757100/pexels-photo-12757100.jpeg?auto=compress&cs=tinysrgb&w=500"}
+];
+
+let cart = []; // {productId, size, qty}
+let currentFilter = "all";
+let selectedSize = null;
+let selectedQty = 1;
+
+let users = [];       // {name, email, password}
+let currentUser = null;
+let authMode = "login";
+let pendingCheckout = false;
+
+/* ============ MONEY FORMAT ============ */
+function formatMoney(n){
+  return "UGX " + Math.round(n).toLocaleString('en-US');
+}
+const FREE_SHIP_THRESHOLD = 280000;
+const SHIP_FEE = 26000;
+
+/* ============ SVG ICONS ============ */
+function svgIcon(p){
+  const c = p.color;
+  const strokeOnWhite = (c.toLowerCase()==="#ffffff") ? "#dcd8cd" : "none";
+  if(p.icon==="jersey"){
+    return `<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <path d="M35 8 L20 22 L28 40 L38 34 L38 108 L82 108 L82 34 L92 40 L100 22 L85 8 L72 16 C68 20 52 20 48 16 Z"
+        fill="${c}" stroke="${strokeOnWhite}" stroke-width="2"/>
+      <text x="60" y="72" font-family="Anton, sans-serif" font-size="30" fill="${c==='#ffffff'?'#14161b':'#ffffff'}" text-anchor="middle">${p.number}</text>
+    </svg>`;
+  }
+  if(p.icon==="shorts"){
+    return `<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <path d="M22 20 H98 L96 60 L74 60 L70 100 L58 100 L56 64 L64 64 L64 60 L56 60 L54 100 L42 100 L38 60 L16 60 Z" fill="${c}" stroke="${strokeOnWhite}" stroke-width="2"/>
+      <rect x="22" y="20" width="76" height="10" fill="rgba(0,0,0,0.15)"/>
+    </svg>`;
+  }
+  if(p.icon==="shoe"){
+    return `<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15 82 C15 70 25 66 34 62 C44 58 50 46 58 46 C64 46 64 54 70 56 C82 60 105 58 105 78 C105 88 96 92 84 92 L20 92 C16 92 15 87 15 82 Z" fill="${c}" stroke="${strokeOnWhite}" stroke-width="2"/>
+      <path d="M15 82 H105" stroke="rgba(0,0,0,0.2)" stroke-width="4"/>
+      <path d="M40 60 L48 76 M52 55 L60 76 M64 54 L72 76" stroke="rgba(255,255,255,0.6)" stroke-width="3" fill="none"/>
+    </svg>`;
+  }
+  if(p.icon==="ball"){
+    return `<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="60" cy="60" r="46" fill="${c}" stroke="#14161b" stroke-width="2.5"/>
+      <polygon points="60,36 74,46 69,63 51,63 46,46" fill="#14161b"/>
+      <path d="M60 14 V36 M60 106 V84 M14 60 H36 M84 60 H106 M27 27 L44 44 M76 76 L93 93 M93 27 L76 44 M44 76 L27 93" stroke="#14161b" stroke-width="2"/>
+    </svg>`;
+  }
+  if(p.icon==="sock"){
+    return `<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <path d="M45 10 H75 V60 C75 60 100 68 100 92 C100 104 90 110 78 110 H45 C40 110 38 106 38 100 V16 C38 12 41 10 45 10 Z" fill="${c}" stroke="${strokeOnWhite}" stroke-width="2"/>
+      <rect x="45" y="10" width="30" height="14" fill="rgba(255,255,255,0.35)"/>
+      <rect x="45" y="34" width="30" height="8" fill="rgba(255,255,255,0.25)"/>
+    </svg>`;
+  }
+  return `<svg viewBox="0 0 120 120"></svg>`;
+}
+function mediaFor(p){
+  if(p.image) return `<img src="${p.image}" alt="${p.name}" loading="lazy">`;
+  return svgIcon(p);
+}
+function mediaClass(p){ return p.image ? "has-photo" : ""; }
+
+/* ============ RENDER: HERO VISUAL + MARQUEE ============ */
+function renderHeroVisual(){
+  document.getElementById('heroVisual').innerHTML = svgIcon({icon:"jersey",color:"#ff5a1f",number:9});
+  const words = ["FOOTBALL","BASKETBALL","VOLLEYBALL","ATHLETICS","FOOTWEAR","ACCESSORIES"];
+  const seq = [...words, ...words].map(w=>`<span>${w}</span>`).join("");
+  document.getElementById('marqueeTrack').innerHTML = seq;
+}
+
+/* ============ RENDER: CATEGORY GRID ============ */
+function renderCategories(){
+  document.getElementById('categoryGrid').innerHTML = CATEGORIES.map(c=>`
+    <div class="cat-card" style="background-image:url('${c.image}')" onclick="navigate('products','${c.key}')">
+      <div class="cat-number">${c.num}</div>
+      <div>
+        <h3>${c.label}</h3>
+        <div class="arrow">→</div>
+      </div>
+    </div>
+  `).join("");
+}
+
+/* ============ RENDER: PRODUCT CARD ============ */
+function productCard(p){
+  return `
+    <div class="product-card">
+      <div class="product-media ${mediaClass(p)}" onclick="navigate('detail', null, ${p.id})" style="cursor:pointer;">
+        ${p.id<=4 ? '<span class="tag-new">NEW</span>' : ''}
+        ${mediaFor(p)}
+      </div>
+      <div class="product-body" onclick="navigate('detail', null, ${p.id})" style="cursor:pointer;">
+        <div class="product-sport">${p.sport}</div>
+        <div class="product-name">${p.name}</div>
+        <div class="product-price">${formatMoney(p.price)}</div>
+      </div>
+      <div class="product-actions">
+        <button class="btn btn-ghost" onclick="navigate('detail', null, ${p.id})">View</button>
+        <button class="btn btn-dark" onclick="quickAdd(${p.id})">Add to cart</button>
+      </div>
+    </div>
+  `;
+}
+function renderFeatured(){
+  document.getElementById('featuredGrid').innerHTML = PRODUCTS.slice(0,4).map(productCard).join("");
+}
+
+/* ============ RENDER: PRODUCTS PAGE ============ */
+function renderFilterBar(){
+  const cats = ["all", ...new Set(PRODUCTS.map(p=>p.sport))];
+  document.getElementById('filterBar').innerHTML = cats.map(c=>`
+    <button class="filter-chip ${c===currentFilter?'active':''}" onclick="setFilter('${c}')">
+      ${c==="all"?"All":c.charAt(0).toUpperCase()+c.slice(1)}
+    </button>
+  `).join("");
+}
+function setFilter(c){ currentFilter = c; renderFilterBar(); renderProductsGrid(); }
+function renderProductsGrid(){
+  const list = currentFilter==="all" ? PRODUCTS : PRODUCTS.filter(p=>p.sport===currentFilter);
+  document.getElementById('productsGrid').innerHTML = list.map(productCard).join("") || `<p style="color:var(--muted);">No products in this category yet.</p>`;
+}
+
+/* ============ RENDER: PRODUCT DETAIL ============ */
+function renderDetail(id){
+  const p = PRODUCTS.find(x=>x.id===id);
+  if(!p) return;
+  selectedSize = p.sizes[0];
+  selectedQty = 1;
+  document.getElementById('detailCrumb').textContent = p.name;
+
+  document.getElementById('detailContent').innerHTML = `
+    <div class="detail-media ${mediaClass(p)}">${mediaFor(p)}</div>
+    <div class="detail-info">
+      <div class="product-sport">${p.sport} / ${p.cat}</div>
+      <h1>${p.name}</h1>
+      <div class="detail-price">${formatMoney(p.price)}</div>
+      <p class="detail-desc">${p.desc}</p>
+      <div class="option-block">
+        <span class="option-label">Size</span>
+        <div class="size-row" id="sizeRow">
+          ${p.sizes.map(s=>`<div class="size-opt ${s===selectedSize?'selected':''}" onclick="selectSize('${s}')">${s}</div>`).join("")}
+        </div>
+      </div>
+      <div class="option-block">
+        <span class="option-label">Quantity</span>
+        <div class="qty-row">
+          <div class="qty-control">
+            <button onclick="stepQty(-1)">−</button>
+            <span id="qtyDisplay">1</span>
+            <button onclick="stepQty(1)">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="detail-cta">
+        <button class="btn btn-dark" onclick="addToCart(${p.id})">Add to cart</button>
+        <button class="btn btn-cobalt" onclick="addToCart(${p.id}); navigate('cart')">Buy now</button>
+      </div>
+      <div class="detail-meta">
+        <span>Free shipping on orders over ${formatMoney(FREE_SHIP_THRESHOLD)}</span>
+        <span>Ships within 48 hours</span>
+        <span>30-day returns on unworn kit</span>
+      </div>
+    </div>
+  `;
+
+  const related = PRODUCTS.filter(x=>x.sport===p.sport && x.id!==p.id).slice(0,4);
+  const fallback = related.length ? related : PRODUCTS.filter(x=>x.id!==p.id).slice(0,4);
+  document.getElementById('relatedGrid').innerHTML = fallback.map(productCard).join("");
+}
+function selectSize(s){
+  selectedSize = s;
+  document.querySelectorAll('#sizeRow .size-opt').forEach(el=>{
+    el.classList.toggle('selected', el.textContent.trim()===s);
+  });
+}
+function stepQty(d){
+  selectedQty = Math.max(1, selectedQty + d);
+  document.getElementById('qtyDisplay').textContent = selectedQty;
+}
+
+/* ============ CART LOGIC ============ */
+function addToCart(id){
+  const existing = cart.find(l=>l.productId===id && l.size===selectedSize);
+  if(existing){ existing.qty += selectedQty; }
+  else{ cart.push({productId:id, size:selectedSize, qty:selectedQty}); }
+  updateCartCount();
+  showToast("Added to your bag");
+}
+function quickAdd(id){
+  const p = PRODUCTS.find(x=>x.id===id);
+  const size = p.sizes[0];
+  const existing = cart.find(l=>l.productId===id && l.size===size);
+  if(existing){ existing.qty += 1; } else { cart.push({productId:id, size, qty:1}); }
+  updateCartCount();
+  showToast("Added to your bag");
+}
+function removeLine(idx){ cart.splice(idx,1); updateCartCount(); renderCart(); }
+function changeLineQty(idx, d){ cart[idx].qty = Math.max(1, cart[idx].qty + d); renderCart(); updateCartCount(); }
+function updateCartCount(){
+  document.getElementById('cartCount').textContent = cart.reduce((s,l)=>s+l.qty,0);
+}
+function cartTotal(){
+  return cart.reduce((sum,l)=>{
+    const p = PRODUCTS.find(x=>x.id===l.productId);
+    return sum + (p ? p.price*l.qty : 0);
+  },0);
+}
+function renderCart(){
+  const container = document.getElementById('cartContent');
+  if(cart.length===0){
+    container.innerHTML = `
+      <div class="empty-state">
+        <h3>Your bag is empty</h3>
+        <p>Nothing here yet — browse the kit list and add something to your bag.</p>
+        <div style="margin-top:20px;"><button class="btn btn-dark" onclick="navigate('products')">Shop products</button></div>
+      </div>`;
+    return;
+  }
+  const lines = cart.map((l,idx)=>{
+    const p = PRODUCTS.find(x=>x.id===l.productId);
+    return `
+      <div class="cart-line">
+        <div class="thumb ${mediaClass(p)}">${mediaFor(p)}</div>
+        <div>
+          <div class="cart-line-name">${p.name}</div>
+          <div class="cart-line-meta">Size ${l.size}</div>
+          <div class="cart-line-controls">
+            <div class="qty-control">
+              <button onclick="changeLineQty(${idx},-1)">−</button>
+              <span>${l.qty}</span>
+              <button onclick="changeLineQty(${idx},1)">+</button>
+            </div>
+            <button class="cart-remove" onclick="removeLine(${idx})">Remove</button>
+          </div>
+        </div>
+        <div class="cart-line-price">${formatMoney(p.price*l.qty)}</div>
+      </div>
+    `;
+  }).join("");
+
+  const subtotal = cartTotal();
+  const shipping = subtotal >= FREE_SHIP_THRESHOLD ? 0 : SHIP_FEE;
+  const total = subtotal + shipping;
+
+  container.innerHTML = `
+    <div class="cart-layout">
+      <div>${lines}</div>
+      <div class="summary-box">
+        <h3 style="font-size:18px;margin-bottom:20px;">Order summary</h3>
+        <div class="summary-row"><span>Subtotal</span><span>${formatMoney(subtotal)}</span></div>
+        <div class="summary-row"><span>Shipping</span><span>${shipping===0?'Free':formatMoney(shipping)}</span></div>
+        <div class="summary-row total"><span>Total</span><span>${formatMoney(total)}</span></div>
+        <button class="btn btn-cobalt btn-block" style="margin-top:20px;padding:16px;" onclick="navigate('checkout')">Checkout</button>
+        <button class="btn btn-ghost btn-block" style="margin-top:10px;padding:14px;" onclick="navigate('products')">Continue shopping</button>
+      </div>
+    </div>
+  `;
+}
+
+/* ============ CHECKOUT ============ */
+function renderCheckout(){
+  const container = document.getElementById('checkoutContent');
+  if(cart.length===0){
+    container.innerHTML = `
+      <div class="empty-state">
+        <h3>Nothing to check out</h3>
+        <p>Your bag is empty. Add a product before heading to checkout.</p>
+        <div style="margin-top:20px;"><button class="btn btn-dark" onclick="navigate('products')">Shop products</button></div>
+      </div>`;
+    return;
+  }
+  const subtotal = cartTotal();
+  const shipping = subtotal >= FREE_SHIP_THRESHOLD ? 0 : SHIP_FEE;
+  const total = subtotal + shipping;
+  const orderLines = cart.map(l=>{
+    const p = PRODUCTS.find(x=>x.id===l.productId);
+    return `<div class="order-item-row"><span>${p.name} · ${l.size} × ${l.qty}</span><span>${formatMoney(p.price*l.qty)}</span></div>`;
+  }).join("");
+
+  container.innerHTML = `
+    <div class="section-head"><div><h2>Checkout</h2><p>Logged in as ${currentUser ? currentUser.email : ''}</p></div></div>
+    <div class="checkout-layout">
+      <form id="checkoutForm" onsubmit="handleCheckoutSubmit(event)">
+        <fieldset>
+          <legend>Contact</legend>
+          <div class="field"><label for="chkEmail">Email</label><input id="chkEmail" type="email" value="${currentUser ? currentUser.email : ''}" required></div>
+        </fieldset>
+        <fieldset>
+          <legend>Shipping address</legend>
+          <div class="form-grid">
+            <div class="field full"><label for="chkName">Full name</label><input id="chkName" value="${currentUser ? currentUser.name : ''}" required></div>
+            <div class="field full"><label for="chkAddr">Address</label><input id="chkAddr" required></div>
+            <div class="field"><label for="chkCity">City</label><input id="chkCity" required></div>
+            <div class="field"><label for="chkPostal">Postal code</label><input id="chkPostal" required></div>
+            <div class="field full"><label for="chkCountry">Country</label>
+              <select id="chkCountry" required>
+                <option>Uganda</option><option>Kenya</option><option>Tanzania</option>
+                <option>Rwanda</option><option>Other</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Payment</legend>
+          <div class="form-grid">
+            <div class="field full"><label for="chkCard">Card number</label><input id="chkCard" placeholder="•••• •••• •••• ••••" required></div>
+            <div class="field"><label for="chkExp">Expiry</label><input id="chkExp" placeholder="MM/YY" required></div>
+            <div class="field"><label for="chkCvc">CVC</label><input id="chkCvc" placeholder="•••" required></div>
+          </div>
+        </fieldset>
+        <button class="btn btn-cobalt btn-block" style="padding:16px;" type="submit">Place order · ${formatMoney(total)}</button>
+      </form>
+      <div class="summary-box">
+        <h3 style="font-size:18px;margin-bottom:16px;">Order summary</h3>
+        ${orderLines}
+        <div class="summary-row" style="margin-top:16px;"><span>Subtotal</span><span>${formatMoney(subtotal)}</span></div>
+        <div class="summary-row"><span>Shipping</span><span>${shipping===0?'Free':formatMoney(shipping)}</span></div>
+        <div class="summary-row total"><span>Total</span><span>${formatMoney(total)}</span></div>
+      </div>
+    </div>
+  `;
+}
+function handleCheckoutSubmit(e){
+  e.preventDefault();
+  const orderNum = Math.floor(1000+Math.random()*9000);
+  cart = [];
+  updateCartCount();
+  document.getElementById('checkoutContent').innerHTML = `
+    <div class="confirm-box">
+      <div class="num">✓</div>
+      <h2>Order placed</h2>
+      <p>Order #NDL-${orderNum} is confirmed. A receipt and tracking details have been sent to your email. You can also WhatsApp us the order number for updates.</p>
+      <div class="btn-row" style="justify-content:center;">
+        <button class="btn btn-dark" onclick="navigate('products')">Continue shopping</button>
+        <a class="btn btn-whatsapp" href="https://wa.me/2507805441990?text=Hi%2C%20I%20just%20placed%20order%20%23NDL-${orderNum}." target="_blank" rel="noopener">Message us on WhatsApp</a>
+      </div>
+    </div>
+  `;
+}
+
+/* ============ ACCOUNT / LOGIN ============ */
+function updateAccountButton(){
+  const btn = document.getElementById('accountBtn');
+  btn.innerHTML = currentUser
+    ? `<span class="acct-label">Hi, ${currentUser.name.split(' ')[0]}</span>`
+    : `<span class="acct-label">Login</span>`;
+}
+function renderAccount(){
+  const container = document.getElementById('accountContent');
+  if(currentUser){
+    container.innerHTML = `
+      <div class="dashboard-card">
+        <div class="avatar-badge">${currentUser.name.charAt(0).toUpperCase()}</div>
+        <h3>Welcome back, ${currentUser.name.split(' ')[0]}</h3>
+        <p>You're logged in and ready to check out.</p>
+        <div class="dashboard-row"><span>Name</span><span>${currentUser.name}</span></div>
+        <div class="dashboard-row"><span>Email</span><span>${currentUser.email}</span></div>
+        <button class="btn btn-dark btn-block" style="margin-bottom:10px;" onclick="navigate('products')">Continue shopping</button>
+        <button class="btn btn-ghost btn-block" onclick="logout()">Log out</button>
+      </div>
+    `;
+    return;
+  }
+  const notice = pendingCheckout
+    ? `<div class="auth-notice">Log in or create an account to complete checkout.</div>` : "";
+  container.innerHTML = `
+    <div class="account-wrap">
+      ${notice}
+      <div class="auth-tabs">
+        <div class="auth-tab ${authMode==='login'?'active':''}" onclick="setAuthMode('login')">Log in</div>
+        <div class="auth-tab ${authMode==='signup'?'active':''}" onclick="setAuthMode('signup')">Create account</div>
+      </div>
+      <div class="auth-error" id="authError"></div>
+      ${authMode==='login' ? `
+        <form onsubmit="handleLogin(event)">
+          <div class="field"><label for="loginEmail">Email</label><input id="loginEmail" type="email" required></div>
+          <div class="field"><label for="loginPass">Password</label><input id="loginPass" type="password" required></div>
+          <button class="btn btn-cobalt btn-block" style="padding:15px;" type="submit">Log in</button>
+        </form>
+      ` : `
+        <form onsubmit="handleSignup(event)">
+          <div class="field"><label for="suName">Full name</label><input id="suName" required></div>
+          <div class="field"><label for="suEmail">Email</label><input id="suEmail" type="email" required></div>
+          <div class="field"><label for="suPass">Password</label><input id="suPass" type="password" minlength="4" required></div>
+          <button class="btn btn-cobalt btn-block" style="padding:15px;" type="submit">Create account</button>
+        </form>
+      `}
+    </div>
+  `;
+}
+function setAuthMode(mode){ authMode = mode; renderAccount(); }
+function showAuthError(msg){
+  const el = document.getElementById('authError');
+  if(!el) return;
+  el.textContent = msg;
+  el.style.display = 'block';
+}
+function handleSignup(e){
+  e.preventDefault();
+  const name = document.getElementById('suName').value.trim();
+  const email = document.getElementById('suEmail').value.trim().toLowerCase();
+  const password = document.getElementById('suPass').value;
+  if(users.find(u=>u.email===email)){
+    showAuthError("An account with this email already exists. Try logging in instead.");
+    return;
+  }
+  const user = {name, email, password};
+  users.push(user);
+  currentUser = user;
+  updateAccountButton();
+  showToast("Account created — welcome!");
+  afterAuthSuccess();
+}
+function handleLogin(e){
+  e.preventDefault();
+  const email = document.getElementById('loginEmail').value.trim().toLowerCase();
+  const password = document.getElementById('loginPass').value;
+  const user = users.find(u=>u.email===email && u.password===password);
+  if(!user){
+    showAuthError("We couldn't find an account with that email and password. Create an account if you're new here.");
+    return;
+  }
+  currentUser = user;
+  updateAccountButton();
+  showToast("Logged in — welcome back!");
+  afterAuthSuccess();
+}
+function afterAuthSuccess(){
+  if(pendingCheckout){
+    pendingCheckout = false;
+    navigate('checkout');
+  } else {
+    navigate('account');
+  }
+}
+function logout(){
+  currentUser = null;
+  updateAccountButton();
+  authMode = 'login';
+  navigate('account');
+}
+
+/* ============ CONTACT FORM ============ */
+function handleContactSubmit(e){
+  e.preventDefault();
+  document.getElementById('contactForm').style.display='none';
+  document.getElementById('contactConfirm').style.display='block';
+}
+
+/* ============ TOAST ============ */
+let toastTimer;
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.classList.remove('show'), 2200);
+}
+
+/* ============ NAVIGATION ============ */
+function navigate(page, filterKey, productId){
+  if(page==='checkout' && !currentUser){
+    pendingCheckout = true;
+    page = 'account';
+  }
+
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelector(`.page[data-page="${page}"]`).classList.add('active');
+  document.querySelectorAll('.main-nav a').forEach(a=>a.classList.toggle('active', a.dataset.nav===page));
+
+  if(page==="products"){
+    currentFilter = filterKey || "all";
+    renderFilterBar();
+    renderProductsGrid();
+  }
+  if(page==="detail" && productId){ renderDetail(productId); }
+  if(page==="cart") renderCart();
+  if(page==="checkout") renderCheckout();
+  if(page==="account") renderAccount();
+
+  document.getElementById('mainNav').classList.remove('open');
+  window.scrollTo({top:0, behavior:'instant'});
+}
+
+/* ============ MOBILE MENU ============ */
+document.getElementById('menuToggle').addEventListener('click', ()=>{
+  document.getElementById('mainNav').classList.toggle('open');
+});
+
+/* ============ INIT ============ */
+renderHeroVisual();
+renderCategories();
+renderFeatured();
+renderFilterBar();
+renderProductsGrid();
+updateAccountButton();
+navigate('home');
+</script>
+</body>
+</html>
